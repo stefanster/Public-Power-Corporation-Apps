@@ -1,79 +1,39 @@
-# Aegean Fuel Command v2.1
+# Aegean Fuel Command v3.0
 
-A single-file Streamlit prototype for planning fuel deliveries from **Lavrio** to power stations on **Sifnos, Milos, Paros, Santorini, and Limnos** using the vessels **PPC Star Delos, PPC Star Naxos, and PPC Star Chios**.
+Single-file Streamlit prototype for PPC island fuel-delivery planning.
 
-The app includes synthetic station inventories and demand history, vessel data, ship-availability calendars, multi-island voyages, dispatch planning, voyage maps with ship labels, ETA/cargo tables, and scenario controls.
+## Included
 
-## Files
+- Embedded PPC Generation Operations Transformation Department logo (no separate image file required)
+- Stations & Fleet Data tab
+- Vessel availability calendars for PPC Star Delos, PPC Star Naxos and PPC Star Chios
+- Rolling-horizon inventory planning across the entire selected planning period
+- Repeat replenishment voyages as stations approach safety stock
+- Multi-island voyages from Lavrio and back to Lavrio
+- Voyage maps with ship-specific colours, ship labels and direction arrows on every leg
+- Full vessel schedule and stop-by-stop ETA / cargo details
+- Planned inventory trajectory including scheduled deliveries
 
-```text
-.
-├── main.py
-├── requirements.txt
-└── README.md
-```
+## Local / PyCharm
 
-No CSV files, database, API keys, or external data files are required for this demonstration build.
+Place `main.py` in the project and press **Run**. The script launches itself through Streamlit when executed as ordinary Python.
 
-## Run locally in PyCharm
-
-1. Create/open a PyCharm project and put these three files in the project root.
-2. Select your Python virtual environment/interpreter.
-3. Recommended: install the dependencies once:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Open `main.py` and press **Run**.
-
-`main.py` detects an ordinary Python/PyCharm launch and relaunches itself correctly through Streamlit. If a required package is missing, the launcher will attempt to install it into the active interpreter.
-
-You can also start it explicitly from a terminal:
+Or run:
 
 ```bash
 streamlit run main.py
 ```
 
-## Publish it so anyone with the link can view it
+## Streamlit Community Cloud
 
-### 1. Create a GitHub repository
+Upload these files to the root of a GitHub repository:
 
-Create a repository such as:
+- `main.py`
+- `requirements.txt`
+- `README.md`
 
-```text
-aegean-fuel-command
-```
+Then select `main.py` as the Streamlit Cloud entrypoint.
 
-Upload the three files from this package to the repository root and commit them.
+## Important
 
-### 2. Deploy on Streamlit Community Cloud
-
-1. Go to **https://share.streamlit.io/** and sign in with GitHub.
-2. Choose **Create app**.
-3. Select your GitHub repository and branch (normally `main`).
-4. Set the app entrypoint/file path to:
-
-```text
-main.py
-```
-
-5. Choose an available app subdomain, for example `aegean-fuel-command`.
-6. Deploy the app.
-7. Make sure the app's sharing/visibility setting is **public** if you want anyone with the URL to open it.
-
-Your public link will look similar to:
-
-```text
-https://aegean-fuel-command.streamlit.app
-```
-
-Anyone with that public URL can use the dashboard in a browser; they do not need Python, PyCharm, or Streamlit installed.
-
-## Updating the public app
-
-GitHub is the source for the deployed application. Edit `main.py`, commit, and push the change to the same repository. Streamlit Community Cloud will pick up the update while the app URL remains the same.
-
-## Prototype disclaimer
-
-All vessel, station, inventory, capacity, demand, consumption, handling, and voyage assumptions are hypothetical. Distances are simplified for demonstration. Production deployment should add validated operational data, navigational routing, berth/port windows, weather restrictions, vessel compatibility, costs, bunker consumption, regulatory constraints, and a formal optimization engine.
+All operating data in this prototype are hypothetical. Straight-line nautical distances are used for demonstration and are not navigational routes.
