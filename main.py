@@ -753,8 +753,8 @@ def render_fleet_location_map() -> None:
 
     # Small offsets so the three ships are visible as separate berthed vessels.
     offsets = [
-        (0.032, -0.040),
-        (0.004, -0.004),
+        (-0.024, 0.033),
+        (-0.025, 0.034),
         (-0.026, 0.034),
     ]
 
