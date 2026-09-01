@@ -1575,4 +1575,3 @@ st.divider()
 st.caption(
     f"Aegean Fuel Command v{APP_VERSION} · Prototype note: all vessel, inventory, capacity, consumption, travel-time, and handling data are hypothetical. The rolling-horizon scheduler repeatedly replenishes stations as projected inventory reaches safety stock. Straight-line nautical distance is used for demonstration; production use should incorporate navigational routing, port windows, weather, berth constraints, ship compatibility, costs, and regulatory requirements."
 )
-
